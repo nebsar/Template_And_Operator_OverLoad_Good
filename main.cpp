@@ -37,9 +37,9 @@ public:
         ++m_size;
     }
 
-        T get(int i) {
-            return m_array[i];
-        }
+    T get(int i) {
+        return m_array[i];
+    }
 
     int getSize() const {
         return m_size;
@@ -52,7 +52,7 @@ public:
     }
 
     T operator[](int i) {
-        return m_array[i];
+        return get(i);
     }
 
 };
@@ -81,7 +81,9 @@ int main(int argc, char** argv) {
 
     vect = square(vect);
 
- vect.printElements();
+    vect = vect*vect;
+
+    vect.printElements();
 
     return 0;
 }
